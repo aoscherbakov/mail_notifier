@@ -1,11 +1,16 @@
 import smtplib
 from email.mime.text import MIMEText
 
-me = "admin@sherbakov.corbina.net"
-you = "ashcherbakov@beeline.ru"
+#me = "admin@sherbakov.corbina.net"
+#you = "ashcherbakov@beeline.ru"
+#
+#login = "user"
+#password = "12345"
 
-login = "user"
-password = "12345"
+fp = open("users", "r")
+
+for user in fp:
+	print user
 
 
 def send(login,password):
@@ -21,4 +26,4 @@ def send(login,password):
 	s.sendmail(me, [you], msg.as_string())
 	s.quit()
 
-send(login,password)
+#send(login,password)
